@@ -1,0 +1,7 @@
+requests
+matplotlib
+tkinter
+keyring
+numpy
+logging
+datetime
