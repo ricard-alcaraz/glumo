@@ -3,7 +3,7 @@
 ## Overview
 
 Glumo is a Continuous Glucose Monitor (CGM) data plotter application.
-Right now, it supports Nightscout and LinkUP APIs.
+Right now, it supports Nightscout and LibreLinkUp APIs.
 
 ## Setup
 
