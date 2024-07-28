@@ -10,19 +10,6 @@ import numpy as np
 import logging
 from glumo.config import get_api_instance
 
-"""from glumo.api_clients.api import (
-    store_credentials,
-    get_patient_connections,
-    login,
-    get_patient_connections,
-    get_cgm_data,
-    store_patient_id,
-    store_token,
-    get_stored_token,
-    get_stored_patient_id,
-    get_stored_credentials,
-)
-"""
 logging.basicConfig(level=logging.DEBUG, format='%(asctime)s - %(levelname)s - %(message)s')
 
 class GlumoApp(tk.Tk):
@@ -50,11 +37,6 @@ class GlumoApp(tk.Tk):
         self.api_dropdown.bind('<<ComboboxSelected>>', self.api_selected)
 
         self.create_widgets()
-
-
-        
-
-
 
         self.protocol("WM_DELETE_WINDOW", self.on_closing)
 
@@ -177,7 +159,7 @@ class GlumoApp(tk.Tk):
         tk.Button(login_window, text="Submit", command=submit).pack(pady=20)
 
     def auto_login(self):
-        """Automatically logs in to the Glumo API.
+        """Automatically logs in to the selected API.
         This method is called when the application is first created.
         """
         logging.debug("Auto login initiated")
@@ -239,7 +221,7 @@ class GlumoApp(tk.Tk):
             
 
     def fetch_data(self):
-        """Fetches CGM data from the Glumo API.
+        """Fetches CGM data from the selected API.
         This method is called periodically to fetch CGM data.
         """
         logging.debug("Fetching data")

@@ -17,7 +17,7 @@ class NightscoutAPI(BaseAPI):
         self.headers = ""
 
     def get_cgm_data(self):
-        """Retrieves data from the Glumo API.
+        """Retrieves data from the Nightscout API.
         Args:
             endpoint (str): The endpoint to retrieve data from.
         Returns:

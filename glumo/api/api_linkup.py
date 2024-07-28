@@ -85,7 +85,7 @@ class LinkUPAPI(BaseAPI):
         return email, password
 
     def login(self):
-        """Logs in to the Glumo API using the provided email and password.
+        """Logs in to the LibreLinkUp API using the provided email and password.
         Args:
             email (str): The email to use for login.
             password (str): The password to use for login.
@@ -173,19 +173,3 @@ class LinkUPAPI(BaseAPI):
         timestamps = [datetime.strptime(entry['Timestamp'], timestamp_format) for entry in graph_data]
         values = [entry['ValueInMgPerDl'] for entry in graph_data]
         return timestamps, values
-
-    # Main Function
-    #def main():
-    #    email = ""  # Replace with your actual email
-    #    password = ""   # Replace with your actual password
-
-    #    token = login(email, password)
-    #    patient_data = get_patient_connections(token)
-        
-    #    patient_id = patient_data['data'][0]["patientId"]
-    #    cgm_data = get_cgm_data(token, patient_id)
-        
-    #    print(cgm_data)
-
-    #if __name__ == "__main__":
-    #    main()
